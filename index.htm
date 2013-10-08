@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TypeNinja jQuery plugin / Tinywall </title>
+<META NAME="author" CONTENT="Arun David">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<META NAME="description" CONTENT="jQuery plugin for anonimous typing to prevent the person nearby reading it.">
+<META NAME="keywords" CONTENT="typeninja,type ninja,jquery plugin,anonimous typing">
+<script src="lib/jquery-1.10.2.min.js"></script>
+<script src="jquery.typeninja.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	$('#mytext').typeninja().focus();
+});
+</script>
+<style>
+a{text-decoration: none;color: #3181CA;}
+body{background: #eeeeee;color: #333333;font-family: arial;font-size:14px;margin: 0;padding: 0;overflow-x:hidden;}
+.container{width: 800px;margin: 50px auto;max-width:90%;margin-top: 20px;}
+.content{background: #ffffff;border: 1px solid #dddddd;padding:20px;}
+.header{text-align: center;max-width: 90%;margin: 0 auto;}
+.title{font-size:50px;margin:10px;}
+.footer{margin-top: 50px;margin-bottom: 50px;text-align: right;}
+.share{margin-top: 20px;}
+.clear{clear: both;}
+#mytext{width:94%;height:250px;padding:3%;font-size:20px;}
+.actions{margin:10px 0px;}
+.section{background: #ffffff;border: 1px solid #dddddd;margin-top: 30px;padding: 20px;}
+
+.onoffswitch {position: relative; width: 165px;-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;margin:auto;margin-bottom:10px;}
+.onoffswitch-checkbox {display: none;}
+.onoffswitch-label {display: block; overflow: hidden; cursor: pointer;border: 2px solid #FFFFF; border-radius: 11px;}
+.onoffswitch-inner {width: 200%; margin-left: -100%;-moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;-o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;}
+.onoffswitch-inner:before, .onoffswitch-inner:after {float: left; width: 50%; height: 52px; padding: 0; line-height: 52px;font-size: 25px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.onoffswitch-inner:before {content: "Ninja";padding-left: 21px;background-color: #48A5C4; color: #FFFFFF;}
+.onoffswitch-inner:after {content: "Normal";padding-right: 21px;background-color: #EEEEEE; color: #999999;text-align: right;}
+.onoffswitch-switch {width: 38px; margin: 7px;background: #FFFFFF;border: 2px solid #FFFFF; border-radius: 11px;position: absolute; top: 0; bottom: 0; right: 110px;-moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;-o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; }
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {margin-left: 0;}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {right: 0px; }
+
+.option-table tr{vertical-align:top;}
+table.option-table{border-width: 1px;border-spacing: 0px;border-style: outset;border-color: #f7f7f7;border-collapse: separate;background-color: white;}
+table.option-table th {border-width: 1px;padding: 5px;border-style: inset;border-color: #f7f7f7;background-color: white;}
+table.option-table td {border-width: 1px;padding: 5px;border-style: inset;border-color: #f7f7f7;background-color: white;}
+</style>
+<link href="lib/prism.css" rel="stylesheet" />
+</head>
+<body>
+<a href="https://github.com/tinywall/typeninja"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+<div class='header'>
+        <h1 class='title'>TypeNinja</h1>
+        <div class='description'>
+		For people annoyed of someone watching your screen while you type.<br/>
+		Use typeninja, Just confuse and make them go mad.
+		</div>
+        <div class='share'>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="tinywallinfo">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <a href="https://twitter.com/ArnDvd" class="twitter-follow-button" data-show-count="false">Follow @ArnDvd</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>&nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/tinywallinfo" class="twitter-follow-button" data-show-count="false">Follow @Tinywall</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <iframe src="http://ghbtns.com/github-btn.html?user=tinywall&repo=typeninja&type=watch&count=true" height="30" width="118" frameborder="0" scrolling="0" style="width:118px; height: 21px;margin-left:25px;" allowTransparency="true"></iframe>
+        </div>
+    </div>
+
+<div class='container'>
+
+
+<div class='content'>
+
+<div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked onclick="$('#toggleButton').click()">
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <div class="onoffswitch-inner"></div>
+        <div class="onoffswitch-switch"></div>
+    </label>
+</div>
+<textarea id='mytext'></textarea>
+<div class='actions'>
+<button id='normalButton' onclick="$('#mytext').typeninjaDecode().focus()">type normal</button>
+<button id='anonButton' onclick="$('#mytext').typeninjaEncode().focus()">type ninja</button>
+<button id='toggleButton' onclick="$('#mytext').typeninjaToggle().focus()">toggle</button>
+<button id='toggleButton' onclick="alert($('#mytext').typeninjaDecodeText());">normal text</button>
+<button id='toggleButton' onclick="alert($('#mytext').typeninjaEncodeText());">ninja text</button>
+<button id='toggleButton' onclick="alert($('#mytext').typeninjaStatus());">typeninja status</button>
+</div><div class='clear'></div>
+<div style='margin-top:10px;float:right;'>
+                Plugin by <a href='http://www.arundavid.com/' target='_blank'>Arun David</a>.
+                </div><div class='clear'></div>
+</div>
+
+<div class='section'><h2 class='subtitle'>Example Usage</h2>
+<a href='http://github.com/tinywall/typeninja' target='_blank'>Download</a> and include the <a href='http://jquery.com' target='_blank'>jQuery</a> library and the <a href='https://raw.github.com/tinywall/typeninja/master/jquery.typeninja.js' target='_blank'>typeninja</a> plugin in your web page.
+                <pre class="  language-markup"><code>
+&lt;script src="jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.typeninja.js"&gt;&lt;/script&gt;
+                </code></pre>
+                Now create a textarea and and use the below code to make it typeninja,
+                <pre><code class="  language-markup">
+&lt;textarea id="mytext"&gt;&lt;/textarea&gt;
+&lt;script&gt;
+$(document).ready(function(){
+	$('#mytext').typeninja().focus();
+});
+&lt;/script&gt;
+                </code></pre>
+</div>
+
+<div class='section'><h2 class='subtitle'>Usage options</h2>
+	<table class="option-table" border='1'>
+        <tr>
+        <td>$('#mytext').typeninja()</td>
+        <td>This function is used to write some code to be executed when the given element is becoming visible to user when scrolling. i.e. coming into the visible part of the browser viewport.</td>
+        </tr>
+        <tr>
+        <td>$('#mytext').typeninjaToggle()</td>
+        <td>Same like showFunction but for the event of the element going out of the visible part of the screen.</td>
+        </tr>
+        <tr>
+        <td>$('#mytext').typeninjaEncode()</td>
+        <td>By default, Even when the small part of the element enters/exists the visibile part, the respective function is being called. But if you make wholeVisible to true, When the whole part of the element comes into the visibil area only the function triggers.</td>
+        </tr>
+        <tr>
+        <td>$('#mytext').typeninjaDecode()</td>
+        <td>To manually specify the distance after how much px it is into the screen, it should trigger the event. Nagative value to trigger the function for the distance before it is being displayed.</td>
+        </tr>
+        <tr>
+        <td>$('#mytext').typeninjaEncodeText()</td>
+        <td>Same like showShift but for hiding the element.</td>
+        </tr>
+        <tr>
+        <td>$('#mytext').typeninjaDecodeText()</td>
+        <td>Same like showShift but for hiding the element.</td>
+        </tr>
+        <tr>
+        <td>$('#mytext').typeninjaStatus()</td>
+        <td>Same like showShift but for hiding the element.</td>
+        </tr>
+        </table>
+</div>
+
+<div class='section'><h2 class='subtitle'>Beware</h2>
+You might have already noticied that this code is just replacing the charecters you are typing with the next charecter in the ASCII code. This plugin is to secure you from the person sitting nearby, not from the hackers. Don't ever think of using it as a security measure in your website now. Maybe a later version with a more customized encoding will do the trick.<br/><br/>
+
+
+</div>
+
+<div class='footer'>Copyright 2013 &copy; Tinywall</div>
+
+</div>
+
+
+
+<script src="lib/prism.js"></script>
+</body>
+</html>
